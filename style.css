@@ -252,3 +252,223 @@ body{
     }
 
 }
+
+/* =========================================
+   MODULE 2 - HERO PREMIUM
+========================================= */
+
+.glass-card{
+
+    width:90%;
+
+    max-width:700px;
+
+    margin:auto;
+
+    padding:45px;
+
+    text-align:center;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:
+
+    0 0 40px rgba(255,77,136,.25);
+
+}
+
+#heroTitle{
+
+    font-size:68px;
+
+    font-family:'Great Vibes',cursive;
+
+    color:#ffffff;
+
+    text-shadow:
+
+    0 0 20px rgba(255,77,136,.5);
+
+}
+
+#heroSubtitle{
+
+    margin-top:18px;
+
+    font-size:28px;
+
+    color:#ff8fb8;
+
+}
+
+#heroText{
+
+    margin-top:30px;
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    opacity:.9;
+
+}
+
+.hero-content h3{
+
+    margin-top:20px;
+
+    font-size:34px;
+
+    color:#ffd6e5;
+
+}
+
+.hero-heart{
+
+    margin-top:35px;
+
+    font-size:70px;
+
+    animation:heroBeat 1.4s infinite;
+
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+#stars{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:-1;
+
+}
+
+.star{
+
+    position:absolute;
+
+    width:3px;
+
+    height:3px;
+
+    background:white;
+
+    border-radius:50%;
+
+    animation:twinkle 2s infinite alternate;
+
+}
+
+/* =========================================
+   PARTICLES
+========================================= */
+
+#particles{
+
+    position:fixed;
+
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+}
+
+.particle{
+
+    position:absolute;
+
+    color:#ff8fb8;
+
+    animation:particleFloat 8s linear infinite;
+
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes heroBeat{
+
+    0%{
+
+        transform:scale(1);
+
+    }
+
+    50%{
+
+        transform:scale(1.2);
+
+    }
+
+    100%{
+
+        transform:scale(1);
+
+    }
+
+}
+
+@keyframes twinkle{
+
+    from{
+
+        opacity:.2;
+
+    }
+
+    to{
+
+        opacity:1;
+
+    }
+
+}
+
+@keyframes particleFloat{
+
+    from{
+
+        transform:translateY(100vh);
+
+        opacity:0;
+
+    }
+
+    20%{
+
+        opacity:1;
+
+    }
+
+    80%{
+
+        opacity:1;
+
+    }
+
+    to{
+
+        transform:translateY(-120px);
+
+        opacity:0;
+
+    }
+
+}
