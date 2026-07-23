@@ -472,3 +472,67 @@ body{
     }
 
 }
+
+/* =========================================
+   LOVE LETTER
+========================================= */
+
+#loveLetterSection{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:120px 20px;
+
+}
+
+.letter-card{
+
+    width:90%;
+
+    max-width:850px;
+
+    padding:45px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 0 35px rgba(255,77,136,.25);
+
+    text-align:center;
+
+}
+
+.letter-card h2{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:58px;
+
+    color:#fff;
+
+    margin-bottom:35px;
+
+}
+
+#letterText{
+
+    font-size:23px;
+
+    line-height:2;
+
+    color:#ffe8f1;
+
+    min-height:260px;
+
+    white-space:pre-line;
+
+}
