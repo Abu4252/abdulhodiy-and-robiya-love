@@ -154,3 +154,136 @@ document.addEventListener("click",(e)=>{
 });
 
 console.log("❤️ Forever With You ❤️");
+
+/* ==========================================
+   MODULE 2
+   PREMIUM HERO
+========================================== */
+
+/* TYPEWRITER */
+
+const heroTitle = document.getElementById("heroTitle");
+
+const heroSubtitle = document.getElementById("heroSubtitle");
+
+const heroText = document.getElementById("heroText");
+
+const titleText = "Abdulhodiy ❤️ Robiya Bibi";
+
+const subtitleText = "∞ Forever With You ∞";
+
+const paragraphText = "Bizning hikoyamiz boshlangan sana...";
+
+function typeWriter(element,text,speed){
+
+    element.innerHTML="";
+
+    let i=0;
+
+    function typing(){
+
+        if(i<text.length){
+
+            element.innerHTML+=text.charAt(i);
+
+            i++;
+
+            setTimeout(typing,speed);
+
+        }
+
+    }
+
+    typing();
+
+}
+
+/* START TYPEWRITER */
+
+setTimeout(()=>{
+
+    typeWriter(heroTitle,titleText,90);
+
+},1300);
+
+setTimeout(()=>{
+
+    typeWriter(heroSubtitle,subtitleText,60);
+
+},4200);
+
+setTimeout(()=>{
+
+    typeWriter(heroText,paragraphText,45);
+
+},6500);
+
+/* ==========================================
+   STARS
+========================================== */
+
+const stars=document.getElementById("stars");
+
+for(let i=0;i<120;i++){
+
+    const star=document.createElement("div");
+
+    star.className="star";
+
+    star.style.left=Math.random()*100+"%";
+
+    star.style.top=Math.random()*100+"%";
+
+    star.style.animationDelay=Math.random()*3+"s";
+
+    stars.appendChild(star);
+
+}
+
+/* ==========================================
+   PARTICLES
+========================================== */
+
+const particles=document.getElementById("particles");
+
+setInterval(()=>{
+
+    const particle=document.createElement("div");
+
+    particle.className="particle";
+
+    particle.innerHTML="❤️";
+
+    particle.style.left=Math.random()*100+"vw";
+
+    particle.style.fontSize=(10+Math.random()*22)+"px";
+
+    particles.appendChild(particle);
+
+    setTimeout(()=>{
+
+        particle.remove();
+
+    },8000);
+
+},450);
+
+/* ==========================================
+   HERO HEART
+========================================== */
+
+const heroHeart=document.querySelector(".hero-heart");
+
+setInterval(()=>{
+
+    heroHeart.style.transform="scale(1.25)";
+
+    setTimeout(()=>{
+
+        heroHeart.style.transform="scale(1)";
+
+    },350);
+
+},1400);
+
+console.log("MODULE 2 LOADED ❤️");
