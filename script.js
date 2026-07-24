@@ -436,3 +436,38 @@ if (galleryImage) {
     }, 3500);
 
 }
+
+// =========================================
+// LOVE COUNTER
+// =========================================
+
+const startDate = new Date("2026-03-03T00:00:00");
+
+const loveCounter = document.getElementById("loveCounter");
+
+if (loveCounter) {
+
+    function updateLoveCounter() {
+
+        const now = new Date();
+
+        const diff = now - startDate;
+
+        const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+
+        const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+
+        const minutes = Math.floor((diff / (1000 * 60)) % 60);
+
+        const seconds = Math.floor((diff / 1000) % 60);
+
+        loveCounter.innerHTML =
+            `${days} kun ${hours} soat ${minutes} daqiqa ${seconds} soniya`;
+
+    }
+
+    updateLoveCounter();
+
+    setInterval(updateLoveCounter, 1000);
+
+}
