@@ -341,3 +341,57 @@ setTimeout(() => {
     typeLetter(loveMessage);
 
 }, 9000);
+
+/* ==========================================
+   GALLERY SLIDER
+========================================== */
+
+const galleryImage = document.getElementById("galleryImage");
+
+const galleryPhotos = [
+
+    "assets/images/photo1.jpg",
+
+    "assets/images/photo2.jpg",
+
+    "assets/images/photo3.jpg",
+
+    "assets/images/photo4.jpg",
+
+    "assets/images/photo5.jpg",
+
+    "assets/images/photo6.jpg"
+
+];
+
+let currentPhoto = 0;
+
+function changeGalleryPhoto(){
+
+    if(!galleryImage) return;
+
+    galleryImage.style.opacity = "0";
+
+    galleryImage.style.transform = "scale(.95)";
+
+    setTimeout(()=>{
+
+        currentPhoto++;
+
+        if(currentPhoto >= galleryPhotos.length){
+
+            currentPhoto = 0;
+
+        }
+
+        galleryImage.src = galleryPhotos[currentPhoto];
+
+        galleryImage.style.opacity = "1";
+
+        galleryImage.style.transform = "scale(1)";
+
+    },500);
+
+}
+
+setInterval(changeGalleryPhoto,4000);
