@@ -471,3 +471,9 @@ if (loveCounter) {
     setInterval(updateLoveCounter, 1000);
 
 }
+
+// ==========================================
+// GALLERY DOTS
+// ==========================================
+
+const dots = document.querySelectorAll(".dot");
