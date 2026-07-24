@@ -287,3 +287,57 @@ setInterval(()=>{
 },1400);
 
 console.log("MODULE 2 LOADED ❤️");
+
+/* ==========================================
+   LOVE LETTER
+========================================== */
+
+const letterText = document.getElementById("letterText");
+
+const loveMessage = `Assalomu alaykum, Robiya Bibi. ❤️
+
+Bilasizmi...
+
+Hayotimdagi eng go'zal ne'matlardan biri — Sizni uchratganim bo'ldi.
+
+Har bir kunim Siz bilan yanada mazmunli.
+
+Har bir duomda Siz borsiz.
+
+Alloh taolo sevgimizni halol yo'l bilan umrbod davom ettirsin.
+
+03.03.2026 — hikoyamiz boshlangan sana.
+
+∞ Forever With You ∞`;
+
+function typeLetter(text, speed = 40) {
+
+    if (!letterText) return;
+
+    letterText.innerHTML = "";
+
+    let i = 0;
+
+    function write() {
+
+        if (i < text.length) {
+
+            letterText.innerHTML += text.charAt(i);
+
+            i++;
+
+            setTimeout(write, speed);
+
+        }
+
+    }
+
+    write();
+
+}
+
+setTimeout(() => {
+
+    typeLetter(loveMessage);
+
+}, 9000);
