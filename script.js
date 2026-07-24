@@ -395,3 +395,44 @@ function changeGalleryPhoto(){
 }
 
 setInterval(changeGalleryPhoto,4000);
+
+// ===============================
+// GALLERY SLIDESHOW
+// ===============================
+
+const galleryImages = [
+    "assets/images/photo1.jpg",
+    "assets/images/photo2.jpg",
+    "assets/images/photo3.jpg",
+    "assets/images/photo4.jpg",
+    "assets/images/photo5.jpg",
+    "assets/images/photo6.jpg"
+];
+
+let galleryIndex = 0;
+
+const galleryImage = document.getElementById("galleryImage");
+
+if (galleryImage) {
+
+    setInterval(() => {
+
+        galleryIndex++;
+
+        if (galleryIndex >= galleryImages.length) {
+            galleryIndex = 0;
+        }
+
+        galleryImage.style.opacity = "0";
+
+        setTimeout(() => {
+
+            galleryImage.src = galleryImages[galleryIndex];
+
+            galleryImage.style.opacity = "1";
+
+        }, 500);
+
+    }, 3500);
+
+}
