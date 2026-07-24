@@ -390,6 +390,10 @@ function changeGalleryPhoto(){
 
         galleryImage.style.transform = "scale(1)";
 
+dots.forEach(dot => dot.classList.remove("active"));
+
+dots[currentPhoto].classList.add("active");
+   
     },500);
 
 }
