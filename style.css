@@ -536,3 +536,67 @@ body{
     white-space:pre-line;
 
 }
+
+/* =========================================
+   GALLERY
+========================================= */
+
+#gallerySection{
+
+    padding:120px 20px;
+
+    text-align:center;
+
+}
+
+.gallery-title{
+
+    font-family:"Great Vibes",cursive;
+
+    font-size:60px;
+
+    color:#ffffff;
+
+    margin-bottom:45px;
+
+    text-shadow:0 0 20px rgba(255,77,136,.5);
+
+}
+
+.gallery-container{
+
+    width:90%;
+
+    max-width:900px;
+
+    margin:auto;
+
+    padding:20px;
+
+    border-radius:30px;
+
+    background:rgba(255,255,255,.08);
+
+    backdrop-filter:blur(18px);
+
+    border:1px solid rgba(255,255,255,.15);
+
+    box-shadow:0 0 40px rgba(255,77,136,.25);
+
+}
+
+#galleryImage{
+
+    width:100%;
+
+    border-radius:22px;
+
+    display:block;
+
+    object-fit:cover;
+
+    transition:.8s ease;
+
+    box-shadow:0 0 35px rgba(255,77,136,.35);
+
+}
