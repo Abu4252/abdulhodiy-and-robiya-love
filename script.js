@@ -19,7 +19,11 @@ startButton.addEventListener("click", () => {
 
     bgMusic.volume = 0.35;
 
-    bgMusic.play();
+    bgMusic.play().then(() => {
+    console.log("Music started ❤️");
+}).catch(error => {
+    console.log("Music error:", error);
+});
 
     introScreen.style.opacity = "0";
 
