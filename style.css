@@ -669,3 +669,73 @@ body{
     transform:scale(1.3);
     box-shadow:0 0 15px #ff4d6d;
 }
+
+/* ==========================================
+   MODULE 6
+   PREMIUM EFFECTS
+========================================== */
+
+#heartsRain,
+#rosePetals,
+#sparkles{
+    position:fixed;
+    inset:0;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:2;
+}
+
+.rain-heart{
+    position:absolute;
+    top:-50px;
+    font-size:22px;
+    animation:heartRain linear forwards;
+}
+
+@keyframes heartRain{
+    from{
+        transform:translateY(-50px) rotate(0deg);
+        opacity:1;
+    }
+    to{
+        transform:translateY(110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+.rose{
+    position:absolute;
+    top:-40px;
+    font-size:24px;
+    animation:roseFall linear forwards;
+}
+
+@keyframes roseFall{
+    from{
+        transform:translateY(-40px) rotate(0deg);
+    }
+    to{
+        transform:translateY(110vh) rotate(540deg);
+        opacity:0;
+    }
+}
+
+.spark{
+    position:absolute;
+    width:4px;
+    height:4px;
+    border-radius:50%;
+    background:white;
+    animation:sparkMove 3s linear forwards;
+}
+
+@keyframes sparkMove{
+    from{
+        transform:translateY(0);
+        opacity:1;
+    }
+    to{
+        transform:translateY(-120px);
+        opacity:0;
+    }
+}
