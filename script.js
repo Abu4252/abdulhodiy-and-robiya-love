@@ -444,3 +444,142 @@ if (loveCounter) {
 // ==========================================
 
 const dots = document.querySelectorAll(".dot");
+
+/* ==========================================
+   MODULE 6
+   PREMIUM EFFECTS
+========================================== */
+
+const heartsRain = document.getElementById("heartsRain");
+const rosePetals = document.getElementById("rosePetals");
+const sparkles = document.getElementById("sparkles");
+
+/* ❤️ HEART RAIN */
+
+setInterval(() => {
+
+    if (!heartsRain) return;
+
+    const heart = document.createElement("div");
+
+    heart.className = "rain-heart";
+
+    heart.innerHTML = "❤️";
+
+    heart.style.left = Math.random() * 100 + "vw";
+
+    heart.style.animationDuration = (4 + Math.random() * 4) + "s";
+
+    heartsRain.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    }, 8000);
+
+}, 350);
+
+/* 🌹 ROSE PETALS */
+
+setInterval(() => {
+
+    if (!rosePetals) return;
+
+    const rose = document.createElement("div");
+
+    rose.className = "rose";
+
+    rose.innerHTML = "🌹";
+
+    rose.style.left = Math.random() * 100 + "vw";
+
+    rose.style.animationDuration = (6 + Math.random() * 4) + "s";
+
+    rosePetals.appendChild(rose);
+
+    setTimeout(() => {
+
+        rose.remove();
+
+    }, 10000);
+
+}, 900);
+
+/* ✨ SPARKLES */
+
+setInterval(() => {
+
+    if (!sparkles) return;
+
+    const spark = document.createElement("div");
+
+    spark.className = "spark";
+
+    spark.style.left = Math.random() * 100 + "vw";
+
+    spark.style.top = Math.random() * 100 + "vh";
+
+    sparkles.appendChild(spark);
+
+    setTimeout(() => {
+
+        spark.remove();
+
+    }, 3000);
+
+}, 200);
+
+/* 📱 SHAKE PHONE = HEART EXPLOSION */
+
+window.addEventListener("devicemotion", (event) => {
+
+    const acc = event.accelerationIncludingGravity;
+
+    if (!acc) return;
+
+    const force = Math.abs(acc.x) + Math.abs(acc.y);
+
+    if (force > 25) {
+
+        for (let i = 0; i < 20; i++) {
+
+            const heart = document.createElement("div");
+
+            heart.innerHTML = "💖";
+
+            heart.style.position = "fixed";
+
+            heart.style.left = Math.random() * window.innerWidth + "px";
+
+            heart.style.top = Math.random() * window.innerHeight + "px";
+
+            heart.style.fontSize = "28px";
+
+            heart.style.pointerEvents = "none";
+
+            heart.style.transition = "2s";
+
+            document.body.appendChild(heart);
+
+            setTimeout(() => {
+
+                heart.style.transform = "translateY(-120px) scale(2)";
+
+                heart.style.opacity = "0";
+
+            }, 50);
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 2000);
+
+        }
+
+    }
+
+});
+
+console.log("❤️ MODULE 6 LOADED ❤️");
